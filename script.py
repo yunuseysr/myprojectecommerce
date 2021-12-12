@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib as plt
 
-
-
 # Reading all the files
 raw_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Data\\'
 olist_customer = pd.read_csv(raw_path + 'olist_customers_dataset.csv')
@@ -36,5 +34,3 @@ for heads in datasets:
 print("Tail of all data fiels")
 for tails in datasets:
     print(tails.tail())
-
-
