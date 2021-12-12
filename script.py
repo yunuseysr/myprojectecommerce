@@ -6,7 +6,7 @@ import matplotlib as plt
 
 
 # Reading all the files
-raw_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\data\\'
+raw_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Data\\'
 olist_customer = pd.read_csv(raw_path + 'olist_customers_dataset.csv')
 olist_geolocation = pd.read_csv(raw_path + 'olist_geolocation_dataset.csv')
 olist_orders = pd.read_csv(raw_path + 'olist_orders_dataset.csv')
@@ -37,17 +37,4 @@ print("Tail of all data fiels")
 for tails in datasets:
     print(tails.tail())
 
-"""I examined the schema contained in the dataset. 
-According to this scheme, I think I will get the desired result by combining 
-the Orders_items dataset with the orders and sellers dataset.  """
 
-
-
-#ToDo
-# Merge ORDERS; ORDERS_ITEMS and SELLERS
-
-#ToDo can be
-# Airflow DAG
-
-#ToDo can be
-# Spark and Spark-Sql README.md dosyasını hazırla
