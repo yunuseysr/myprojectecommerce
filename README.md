@@ -27,4 +27,12 @@ This dataset contains information about the customer and its location. You can u
 * Brazillian ECommerce Projesine kadar her hangi bir platformda Airflow, Spark ve AWS S3 yapılarını kullanmadığım için internet üzerinde araştırmalar yaptım. 
 * Bilgi edindiğim yerlerin linkini aşağıya bırakacağım.
 * Verilen şemayı incelediğim de cevap istenilen soruya -> "Which seller missed their orders' deadline to be delivered to a carrier ?" göre merge işlemlerini yapmam gerekiyormuş.
-* 
+
+# Links
+* How to Read Data from S3 using Python ( BOTO3 ) API
+  * https://www.youtube.com/watch?v=Expy4DjViy4
+* AWS ETL - Configure AWS Data Pipeline from MySql and S3
+  * https://www.youtube.com/watch?v=u8Mub3ytUMg
+* Apache Spark'a Giriş
+  * https://www.youtube.com/watch?v=rkyUubl4Wo0
+
