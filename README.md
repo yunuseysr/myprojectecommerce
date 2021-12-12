@@ -6,7 +6,6 @@ This dataset contains information about the customer and its location. You can u
 
 * Initialize Apache Airflow and Spark
 * Construct diagram on Airflow
-* Get data via Kaggle
 * AWS Platform and S3
 
 # Main Objectives
