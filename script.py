@@ -51,4 +51,18 @@ datasets = [olist_customer, olist_geolocation, olist_orders, olist_order_items, 
 names = ['olist_customer', 'olist_geolocation', 'olist_orders', 'olist_order_items', 'olist_order_payments',
          'olist_order_reviews', 'olist_products', 'olist_sellers']
 
-print(olist_customer.values)
+for i in datasets:
+    print(i.head())
+    print(i.tail())
+#TODO
+# Analyze and clean data
+
+
+#TODO
+# Merge ORDERS; ORDERS_ITEMS and SELLERS
+
+#TODO can be
+# Airflow DAG
+
+#TODO can be
+# Spark and Spark-Sql README.md dosyasını hazırla

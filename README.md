@@ -22,6 +22,10 @@ This dataset contains information about the customer and its location. You can u
   * Upload the output dataset to the same S3 bucket in a folder for use for higher-level analytics.
 
 # Used Techologies:
-
+ FaQ
 * AWS S3 üzerinden data çekimi yapmak için boto3 kütüphanesinden yararlandık. Kütüphane S3 üzerinde daha önce eklediğimi dataları çekmemizde ve düzenlemizde yararlı olacaktır. 
+* Daha önceden S3 üzerinde verilerimizin yüklemesini sağlamadım, bu sebeple AWS S3 üzerinden çalışmalarım bitti.
+* Brazillian ECommerce Projesine kadar her hangi bir platformda Airflow, Spark ve AWS S3 yapılarını kullanmadığım için internet üzerinde araştırmalar yaptım. 
+* Bilgi edindiğim yerlerin linkini aşağıya bırakacağım.
+* Verilen şemayı incelediğim de cevap istenilen soruya -> "Which seller missed their orders' deadline to be delivered to a carrier ?" göre merge işlemlerini yapmam gerekiyormuş.
 * 
