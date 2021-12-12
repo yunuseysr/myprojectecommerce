@@ -20,17 +20,43 @@ datasets = [olist_customer, olist_geolocation, olist_orders, olist_order_items, 
 names = ['olist_customer', 'olist_geolocation', 'olist_orders', 'olist_order_items', 'olist_order_payments',
          'olist_order_reviews', 'olist_products', 'olist_sellers']
 
-
-# Analyze datas
+# Analyze data
 
 """ There are 9 data sets. By referencing these data sets according to the schema, 
 we examine their connections with each other.
 Below we see the first 5 and last 5 data of all datasets. """
-
+"""
 print("Head of all data files")
 for heads in datasets:
     print(heads.head())
 
-print("Tail of all data fiels")
+print("Tail of all data files")
 for tails in datasets:
     print(tails.tail())
+
+print("Columns of all data files")
+for news in datasets:
+    print(news.columns)
+"""
+"""In the analyze phase, I examined what information the columns of the data sets were filled with. 
+The columns that I will answer the question are firstly included in the orders_item, products and orders datasets.
+As seen in the diagram, order_items is a dataset linked to both products and orders. 
+If I can create a Merge operation DataFrame, I think I can handle the data more properly."""
+
+# Merge data from data lake datasets.
+merge_DataFrame = olist_order_items.merge(olist_orders, on='order_id').merge(
+    olist_products[['product_id', 'product_category_name']], on='product_id')
+
+# print(merge_DataFrame.columns)
+# Index(['order_id', 'order_item_id', ....], dtype='object')
+
+"""The shipping_limit_date column in the orders_items dataset and the order_delivered_carrier_date column in the orders dataset caught my attention. 
+If I connect the delivery time to the shipment with the delivery time of the transportation, I can get the misses.
+"""
+missing_DataFrame = merge_DataFrame.loc[
+    merge_DataFrame.shipping_limit_date < merge_DataFrame.order_delivered_carrier_date]
+print(missing_DataFrame.head())
+print(missing_DataFrame.tail())
+
+groupBy_DataFrame = merge_DataFrame.groupby('order_status').count()
+print(groupBy_DataFrame)
