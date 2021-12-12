@@ -21,3 +21,7 @@ This dataset contains information about the customer and its location. You can u
   * Runs a Spark/Spark SQL job on the clean data producing a dataset of delivery deadline missing orders.
   * Upload the output dataset to the same S3 bucket in a folder for use for higher-level analytics.
 
+# Used Techologies:
+
+* AWS S3 üzerinden data çekimi yapmak için boto3 kütüphanesinden yararlandık. Kütüphane S3 üzerinde daha önce eklediğimi dataları çekmemizde ve düzenlemizde yararlı olacaktır. 
+* 
