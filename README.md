@@ -1,11 +1,24 @@
-# myprojectecommerce
+# My Project is myprojectecommerce
 This dataset contains information about the customer and its location. You can use this dataset to identify unique customers in the order dataset and find the delivery location of orders. 
+I can say that I have opened new sails in the field of data science. It was a project that I gained some experience in many different fields and enjoyed preparing.
+It is the project in which Brazil's E-Commerce Public Datasets are processed by Olist. While preparing this project, I benefited from many educational channels and documents. I will give them one by one in the links section. Let me briefly talk about what these E-commerce datasets are.
+
+# Explanation
+"This is a Brazilian ecommerce public dataset of orders made at Olist Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. We also released a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates.
+
+This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced with the names of Game of Thrones great houses."
+* https://www.kaggle.com/olistbr/brazilian-ecommerce
+
+# Data Schema
+The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:
+![img.png](img.png)
 
 
 # TODO List
 
 * Initialize Apache Airflow and Spark
 * Construct diagram on Airflow
+* Get data via Kaggle
 * AWS Platform and S3
 
 # Main Objectives
