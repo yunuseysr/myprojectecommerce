@@ -45,7 +45,8 @@ If I can create a Merge operation DataFrame, I think I can handle the data more 
 
 # Merge data from data lake datasets.
 merge_DataFrame = olist_order_items.merge(olist_orders, on='order_id').merge(
-    olist_products[['product_id', 'product_category_name']], on='product_id')
+    olist_products[['product_id', 'product_category_name']], on='product_id').merge(olist_sellers, on='seller_id')
+print(merge_DataFrame.info())
 
 # print(merge_DataFrame.columns)
 # Index(['order_id', 'order_item_id', ....], dtype='object')
@@ -59,4 +60,4 @@ print(missing_DataFrame.head())
 print(missing_DataFrame.tail())
 
 groupBy_DataFrame = merge_DataFrame.groupby('order_status').count()
-print(groupBy_DataFrame)
+print(groupBy_DataFrame['seller_id'])
