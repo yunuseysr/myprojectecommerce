@@ -56,8 +56,16 @@ If I connect the delivery time to the shipment with the delivery time of the tra
 """
 missing_DataFrame = merge_DataFrame.loc[
     merge_DataFrame.shipping_limit_date < merge_DataFrame.order_delivered_carrier_date]
-print(missing_DataFrame.head())
-print(missing_DataFrame.tail())
+print(missing_DataFrame.info())
+#print(missing_DataFrame.head())
+#print(missing_DataFrame.tail())
 
-groupBy_DataFrame = merge_DataFrame.groupby('order_status').count()
-print(groupBy_DataFrame['seller_id'])
+
+
+groupBy_DataFrame = missing_DataFrame.groupby('order_status').count()
+missed_sellers = missing_DataFrame['seller_id']
+
+# Sellers which missed their orders' deadline to be delivered to a carrier
+for seller in missed_sellers:
+    print(seller)
+
