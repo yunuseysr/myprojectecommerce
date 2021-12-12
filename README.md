@@ -16,27 +16,30 @@ The data is divided in multiple datasets for better understanding and organizati
 
 ## ToDo List
 
-* Construct a data lake that is replete with dataset schema 
-* Analyze and clean the datasets 
-* Answer the question, "which sellers missed their orders" deadline to be delivered to a carrier?"
+* Construct a data lake that is replete with dataset schema ✓
+* Analyze and clean the datasets ✓
+* Answer the question, "which sellers missed their orders" deadline to be delivered to a carrier?" ✓
 * Build ETL Pipeline using Airflow
   * Upload tha datasets manually to AWS S3 ✓
   * Downloads data from an AWS S3 bucket
-  * Run script to answer the question
+  * Run script to answer the question ✓
   * Run Spark/Spark SQL the data producing a dataset of delivery deadline missing orders
   * Upload the output to datasets to the same bucket 
 
 
+## Libraries
+* pandas (v1.2.4)
+* boto3 (v.1.20.23)
 
-## Used Technologies:
+## Used Technologies: (Optimal)
+* AWS S3
+  * https://aws.amazon.com/tr/
 * Apache Airflow 
   * https://airflow.apache.org
 * Apache Spark
   * https://spark.apache.org
-* AWS S3
-  * https://aws.amazon.com/tr/
   
-## Links
+## Links to References
 * How to Read Data from S3 using Python ( BOTO3 ) API
   * https://www.youtube.com/watch?v=Expy4DjViy4
 * AWS ETL - Configure AWS Data Pipeline from MySql and S3

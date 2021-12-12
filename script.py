@@ -1,7 +1,6 @@
 # Libraries which i can need
 import pandas as pd
-import numpy as np
-import matplotlib as plt
+
 
 # Reading all the files
 raw_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Data\\'
