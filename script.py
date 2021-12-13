@@ -76,8 +76,12 @@ print(missing_DataFrame.columns)
 
 groupBy_DataFrame = missing_DataFrame.groupby('order_status').count()
 missed_sellers = missing_DataFrame['seller_id']
-
+missed_seller = []
 # Sellers which missed their orders' deadline to be delivered to a carrier
 for seller in missed_sellers:
-    print(seller)
+    missed_seller.append(seller)
+result_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Result\\'
 
+
+compression_opts = dict(method = 'zip', archive_name = 'result.csv')
+missing_DataFrame.to_csv(result_path + 'result.zip', index= False, compression = compression_opts)
