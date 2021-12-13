@@ -16,6 +16,13 @@ coordinates.
 This is real commercial data, it has been anonymized, and references to the companies and partners in the review text
 have been replaced with the names of Game of Thrones great houses."
 
+## Application
+
+We can run a project with the main.py file in the myprojectecommerce folder.
+
+python main.py
+
+as you can start the code and see the appropriate data visualization results. As a result, you can get the desired answer in the result folder with result.zip. 
 ## Data
 
 * https://www.kaggle.com/olistbr/brazilian-ecommerce
