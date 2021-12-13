@@ -1,7 +1,6 @@
 # Libraries which i can need
 import pandas as pd
 
-
 # Reading all the files
 raw_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Data\\'
 olist_customer = pd.read_csv(raw_path + 'olist_customers_dataset.csv')
@@ -46,12 +45,11 @@ If I can create a Merge operation DataFrame, I think I can handle the data more 
 merge_DataFrame = olist_order_items.merge(olist_orders, on='order_id').merge(
     olist_products[['product_id', 'product_category_name']], on='product_id').merge(olist_sellers, on='seller_id')
 
-#print(merge_DataFrame.head())
-#print(merge_DataFrame.tail())
+# print(merge_DataFrame.head())
+# print(merge_DataFrame.tail())
 
 # Info merge data frame
 print(merge_DataFrame.info())
-
 
 # Columns of merge data frame
 print(merge_DataFrame.columns)
@@ -61,12 +59,11 @@ print(merge_DataFrame.columns)
 If I connect the delivery time to the shipment with the delivery time of the transportation, I can get the misses.
 """
 
-
 missing_DataFrame = merge_DataFrame.loc[
     merge_DataFrame.shipping_limit_date < merge_DataFrame.order_delivered_carrier_date]
 
-#print(missing_DataFrame.head())
-#print(missing_DataFrame.tail())
+# print(missing_DataFrame.head())
+# print(missing_DataFrame.tail())
 print(missing_DataFrame.info())
 
 # Columns of merge data frame
@@ -83,5 +80,5 @@ for seller in missed_sellers:
 result_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Result\\'
 
 # Write the resulting to the result.csv file
-compression_opts = dict(method = 'zip', archive_name = 'result.csv')
-missing_DataFrame.to_csv(result_path + 'result.zip', index= False, compression = compression_opts)
+compression_opts = dict(method='zip', archive_name='result.csv')
+missing_DataFrame.to_csv(result_path + 'result.zip', index=False, compression=compression_opts)
