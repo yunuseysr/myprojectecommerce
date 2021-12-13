@@ -11,8 +11,6 @@ client = boto3.client('s3',
                       aws_access_key_id=access_key,
                       aws_secret_access_key=secret_key)
 
-print('client')
-
 transfer = S3Transfer(client)
 
 print('Transfer - ' + s3_bucket_name)
@@ -27,5 +25,6 @@ def upload(path, s3_bucket_name):
                                      s3_bucket_name, + file)
 
 
+# address to upload the relevant data
 filepath = "C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Kaggle - Data"
 upload(path=filepath, s3_bucket_name='myprojectecommerce')
