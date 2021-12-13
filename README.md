@@ -13,6 +13,23 @@ This is real commercial data, it has been anonymized, and references to the comp
 The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:
 ![img.png](img.png)
 
+## Main Objectives
+1. Construct a mock production data lake that is replete with the
+dataset schema above (using AWS S3 is a bonus).
+2. Analyze and clean the datasets.
+3. Write a Spark and Spark SQL job to join together tables answering
+the question, "Which sellers missed their orders’ deadline to be
+delivered to a carrier?" (using spark is an optional bonus)
+4. Build the ETL pipeline using Airflow (using Airflow is an optional bonus)
+that accomplishes the following:
+   * Downloads data from an AWS S3 bucket (if you have used it for the mock)
+   * Runs a python script job that cleans the downloaded data and
+   writes it to another folder to be used by the next job.
+   * Runs a Spark/Spark SQL job on the clean data producing a
+   dataset of delivery deadline missing orders.
+   * Upload the output dataset to the same S3 bucket (if you have used it
+   for the mock) in a folder ready for use for higher-level analytics
+
 
 ## ToDo List
 
@@ -46,3 +63,5 @@ The data is divided in multiple datasets for better understanding and organizati
   * https://www.youtube.com/watch?v=u8Mub3ytUMg
 * Apache Spark'a Giriş
   * https://www.youtube.com/watch?v=rkyUubl4Wo0
+* About Spark
+  * https://github.com/kaplanbora/spark-talk
