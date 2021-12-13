@@ -82,6 +82,6 @@ for seller in missed_sellers:
     missed_seller.append(seller)
 result_path = 'C:\\Users\\yunus\\OneDrive\\Masaüstü\\Brazillian ECommerce\\myprojectecommerce\\Result\\'
 
-
+# Write the resulting to the result.csv file
 compression_opts = dict(method = 'zip', archive_name = 'result.csv')
 missing_DataFrame.to_csv(result_path + 'result.zip', index= False, compression = compression_opts)
