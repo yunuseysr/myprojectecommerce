@@ -19,7 +19,6 @@ names = ['olist_customer', 'olist_geolocation', 'olist_orders', 'olist_order_ite
          'olist_order_reviews', 'olist_products', 'olist_sellers']
 
 # Analyze data
-
 """ There are 9 data sets. By referencing these data sets according to the schema, 
 we examine their connections with each other.
 Below we see the first 5 and last 5 data of all datasets. """
@@ -45,8 +44,8 @@ If I can create a Merge operation DataFrame, I think I can handle the data more 
 merge_DataFrame = olist_order_items.merge(olist_orders, on='order_id').merge(
     olist_products[['product_id', 'product_category_name']], on='product_id').merge(olist_sellers, on='seller_id')
 
-# print(merge_DataFrame.head())
-# print(merge_DataFrame.tail())
+print(merge_DataFrame.head())
+print(merge_DataFrame.tail())
 
 # Info merge data frame
 print(merge_DataFrame.info())
@@ -62,8 +61,8 @@ If I connect the delivery time to the shipment with the delivery time of the tra
 missing_DataFrame = merge_DataFrame.loc[
     merge_DataFrame.shipping_limit_date < merge_DataFrame.order_delivered_carrier_date]
 
-# print(missing_DataFrame.head())
-# print(missing_DataFrame.tail())
+print(missing_DataFrame.head())
+print(missing_DataFrame.tail())
 print(missing_DataFrame.info())
 
 # Columns of merge data frame
